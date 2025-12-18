@@ -61,18 +61,3 @@ export interface Result {
   created_at: string
 }
 
-// 输入类型（用于创建/更新数据）
-export interface CityInput {
-  city_name: string
-  year: string
-  rate: number
-  base_min: number
-  base_max: number
-}
-
-export interface SalaryInput {
-  employee_id: string
-  employee_name: string
-  month: string
-  salary_amount: number
-}
