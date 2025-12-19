@@ -1,5 +1,5 @@
 import { supabaseAdmin, TABLES } from './supabase'
-  import { CitySchema, SalarySchema, CityInput, SalaryInput } from '@/types/schema'
+import { CitySchema, SalarySchema, CityInput, SalaryInput } from '@/types/schema'
 
 /**
  * 批量插入城市标准数据
