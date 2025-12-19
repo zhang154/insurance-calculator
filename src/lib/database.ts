@@ -12,7 +12,7 @@ export async function batchInsertCities(cities: CityInput[]): Promise<{ success:
       if (!validation.success) {
         return {
           success: false,
-          message: `城市数据验证失败: ${validation.error.errors.map(e => e.message).join(', ')}`
+          `城市数据验证失败: ${validation.error.issues.map(e => e.message).join(', ')}`
         }
       }
     }
@@ -59,7 +59,7 @@ export async function batchInsertSalaries(salaries: SalaryInput[]): Promise<{ su
       if (!validation.success) {
         return {
           success: false,
-          message: `工资数据验证失败: ${validation.error.errors.map(e => e.message).join(', ')}`
+         `工资数据验证失败: ${validation.error.issues.map(e => e.message).join(', ')}`
         }
       }
     }
