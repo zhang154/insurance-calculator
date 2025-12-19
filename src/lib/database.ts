@@ -51,7 +51,7 @@ import { CitySchema, SalarySchema, CityInput, SalaryInput } from '@/types/schema
   /**
    * 批量插入员工工资数据
    */
-  export async function batchInsertSalaries(salaries: SalaryInput[]): Promise<{ success: boolean; message: string }> {
+export async function batchInsertSalaries(salaries: SalaryInput[]): Promise<{ success: boolean; message: string }> {
     try {
       // 验证数据
       for (const salary of salaries) {
@@ -98,7 +98,7 @@ import { CitySchema, SalarySchema, CityInput, SalaryInput } from '@/types/schema
   /**
    * 获取所有计算结果
    */
-  export async function getAllResults(): Promise<{ success: boolean; data?: any[]; message: string }> {
+export async function getAllResults(): Promise<{ success: boolean; data?: any[]; message: string }> {
     try {
       const { data, error } = await supabaseAdmin
         .from(TABLES.RESULTS)
@@ -125,7 +125,7 @@ import { CitySchema, SalarySchema, CityInput, SalaryInput } from '@/types/schema
   /**
    * 获取数据统计信息
    */
-  export async function getDataStatistics(): Promise<{
+export async function getDataStatistics(): Promise<{
     citiesCount: number
     salariesCount: number
     resultsCount: number
